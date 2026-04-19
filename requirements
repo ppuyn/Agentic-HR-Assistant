@@ -1,0 +1,6 @@
+langchain==0.1.0
+openai
+pypdf
+pandas
+python-dotenv
+tiktoken
