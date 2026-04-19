@@ -1,6 +1,5 @@
-langchain==0.1.0
-openai
-pypdf
+langchain
+langchain-openai
 pandas
 python-dotenv
-tiktoken
+pypdf
