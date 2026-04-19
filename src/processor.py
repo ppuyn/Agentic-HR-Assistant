@@ -7,8 +7,12 @@ class HRDataProcessor:
 
     def clean_text(self, text):
         """Standardizes text for NLP tasks."""
-        text = re.sub(r'[^a-zA-Z0-9\s]', '', str(text))
-        return text.strip().lower()
+        # Convert to string and lowercase first
+        text = str(text).lower()
+        # Remove special characters but keep basic punctuation if needed
+        text = re.sub(r'[^a-z0-9\s]', '', text)
+        # Remove extra internal whitespace
+        return " ".join(text.split())
 
     def get_employee_record(self, name):
         """Simulates a database lookup for the Agent to use."""
